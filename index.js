@@ -1,8 +1,18 @@
-const request = require('request-json')
+const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const routes = require('./routes')
 
+const PORT = 7000
 
-let client = request.createClient(url)
+const app = express()
+app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static('public'))
 
-client.get('public/ticker/BTC', (err, res, body) => {
-  console.log(JSON.stringify(body, null, 2))
+app.use('/', routes)
+
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT} - web app started `)
 })
