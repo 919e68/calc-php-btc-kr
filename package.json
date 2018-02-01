@@ -1,0 +1,20 @@
+{
+  "name": "calc-php-btc-kr",
+  "version": "1.0.0",
+  "description": "PHP to BTC to KR calculator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "currency-convert": "^1.0.0",
+    "express": "^4.16.2",
+    "request-json": "^0.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Wilson Anciro",
+  "license": "ISC"
+}
